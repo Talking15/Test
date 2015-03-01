@@ -15,6 +15,10 @@
 		0512424B1AA29CB3002D76A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0512424A1AA29CB3002D76A2 /* Images.xcassets */; };
 		0512424E1AA29CB3002D76A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0512424C1AA29CB3002D76A2 /* LaunchScreen.xib */; };
 		0512425A1AA29CB3002D76A2 /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 051242591AA29CB3002D76A2 /* TestTests.m */; };
+		0512426B1AA2A26A002D76A2 /* OSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051242691AA2A26A002D76A2 /* OSController.m */; };
+		0512426C1AA2A26A002D76A2 /* OSController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0512426A1AA2A26A002D76A2 /* OSController.xib */; };
+		051242701AA2A2AC002D76A2 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0512426E1AA2A2AC002D76A2 /* ThirdViewController.m */; };
+		051242711AA2A2AC002D76A2 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0512426F1AA2A2AC002D76A2 /* ThirdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,12 @@
 		051242531AA29CB3002D76A2 /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		051242581AA29CB3002D76A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		051242591AA29CB3002D76A2 /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		051242681AA2A26A002D76A2 /* OSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSController.h; sourceTree = "<group>"; };
+		051242691AA2A26A002D76A2 /* OSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSController.m; sourceTree = "<group>"; };
+		0512426A1AA2A26A002D76A2 /* OSController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OSController.xib; sourceTree = "<group>"; };
+		0512426D1AA2A2AC002D76A2 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		0512426E1AA2A2AC002D76A2 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		0512426F1AA2A2AC002D76A2 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,9 @@
 				051242421AA29CB3002D76A2 /* FirstViewController.m */,
 				051242441AA29CB3002D76A2 /* SecondViewController.h */,
 				051242451AA29CB3002D76A2 /* SecondViewController.m */,
+				0512426D1AA2A2AC002D76A2 /* ThirdViewController.h */,
+				0512426E1AA2A2AC002D76A2 /* ThirdViewController.m */,
+				0512426F1AA2A2AC002D76A2 /* ThirdViewController.xib */,
 				051242471AA29CB3002D76A2 /* Main.storyboard */,
 				0512424A1AA29CB3002D76A2 /* Images.xcassets */,
 				0512424C1AA29CB3002D76A2 /* LaunchScreen.xib */,
@@ -101,6 +114,10 @@
 		0512423A1AA29CB3002D76A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				051242631AA2A066002D76A2 /* OC */,
+				051242641AA2A066002D76A2 /* OS */,
+				051242651AA2A066002D76A2 /* DS */,
+				051242661AA2A066002D76A2 /* NET */,
 				0512423B1AA29CB3002D76A2 /* Info.plist */,
 				0512423C1AA29CB3002D76A2 /* main.m */,
 			);
@@ -122,6 +139,45 @@
 				051242581AA29CB3002D76A2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		051242631AA2A066002D76A2 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		051242641AA2A066002D76A2 /* OS */ = {
+			isa = PBXGroup;
+			children = (
+				051242671AA2A09D002D76A2 /* NSOperationQueue */,
+				051242681AA2A26A002D76A2 /* OSController.h */,
+				051242691AA2A26A002D76A2 /* OSController.m */,
+				0512426A1AA2A26A002D76A2 /* OSController.xib */,
+			);
+			path = OS;
+			sourceTree = "<group>";
+		};
+		051242651AA2A066002D76A2 /* DS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DS;
+			sourceTree = "<group>";
+		};
+		051242661AA2A066002D76A2 /* NET */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NET;
+			sourceTree = "<group>";
+		};
+		051242671AA2A09D002D76A2 /* NSOperationQueue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSOperationQueue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +263,8 @@
 				051242491AA29CB3002D76A2 /* Main.storyboard in Resources */,
 				0512424E1AA29CB3002D76A2 /* LaunchScreen.xib in Resources */,
 				0512424B1AA29CB3002D76A2 /* Images.xcassets in Resources */,
+				051242711AA2A2AC002D76A2 /* ThirdViewController.xib in Resources */,
+				0512426C1AA2A26A002D76A2 /* OSController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +284,9 @@
 			files = (
 				051242461AA29CB3002D76A2 /* SecondViewController.m in Sources */,
 				051242401AA29CB3002D76A2 /* AppDelegate.m in Sources */,
+				051242701AA2A2AC002D76A2 /* ThirdViewController.m in Sources */,
 				051242431AA29CB3002D76A2 /* FirstViewController.m in Sources */,
+				0512426B1AA2A26A002D76A2 /* OSController.m in Sources */,
 				0512423D1AA29CB3002D76A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
