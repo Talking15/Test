@@ -21,6 +21,8 @@
 		051242711AA2A2AC002D76A2 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0512426F1AA2A2AC002D76A2 /* ThirdViewController.xib */; };
 		051242741AA2B562002D76A2 /* OperationQueueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051242731AA2B562002D76A2 /* OperationQueueController.m */; };
 		051242771AA2B5B4002D76A2 /* DownOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 051242761AA2B5B4002D76A2 /* DownOperation.m */; };
+		0512427A1AA304CE002D76A2 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 051242781AA304CE002D76A2 /* libxml2.2.dylib */; };
+		0512427B1AA304CE002D76A2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 051242791AA304CE002D76A2 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		051242731AA2B562002D76A2 /* OperationQueueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueueController.m; sourceTree = "<group>"; };
 		051242751AA2B5B4002D76A2 /* DownOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownOperation.h; sourceTree = "<group>"; };
 		051242761AA2B5B4002D76A2 /* DownOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownOperation.m; sourceTree = "<group>"; };
+		051242781AA304CE002D76A2 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		051242791AA304CE002D76A2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0512427A1AA304CE002D76A2 /* libxml2.2.dylib in Frameworks */,
+				0512427B1AA304CE002D76A2 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,8 @@
 		0512422E1AA29CB3002D76A2 = {
 			isa = PBXGroup;
 			children = (
+				051242781AA304CE002D76A2 /* libxml2.2.dylib */,
+				051242791AA304CE002D76A2 /* libxml2.dylib */,
 				051242391AA29CB3002D76A2 /* Test */,
 				051242561AA29CB3002D76A2 /* TestTests */,
 				051242381AA29CB3002D76A2 /* Products */,
@@ -423,6 +431,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +446,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +510,7 @@
 				0512425F1AA29CB3002D76A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		051242601AA29CB3002D76A2 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +519,7 @@
 				051242621AA29CB3002D76A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

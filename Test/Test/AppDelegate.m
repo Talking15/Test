@@ -13,12 +13,40 @@
 @end
 
 @implementation AppDelegate
+static AppDelegate *shared;
+static NSArray *urlArray;
 
-
++ (id)shared{
+    return [[UIApplication sharedApplication] delegate];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:@"http://www.google.com"];
+    [array addObject:@"http://www.apple.com"];
+    [array addObject:@"http://www.yahoo.com"];
+    [array addObject:@"http://www.zarrastudios.com"];
+    [array addObject:@"http://www.macosxhints.com"];
+    urlArray = array;
+    
+    queue = [[NSOperationQueue alloc] init];
+    [queue setMaxConcurrentOperationCount:2];
+    shared = self;
+    
+    
+    for (NSString *urlString in urlArray) {
+        NSURL *url = [NSURL URLWithString:urlString];
+        DownOperation *plo = [[DownOperation alloc] initWithURL:url];
+        [queue addOperation:plo];
+    }
+    
     return YES;
 }
+
+//- (void)pageLoaded:(NSXMLDocument*)document;
+//{
+//    NSLog(@"%s Do something with the XMLDocument: %@", _cmd, document);
+//}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -10,4 +10,6 @@
 
 @interface DownOperation : NSOperation
 @property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSURL *targetURL;
+- (id)initWithURL:(NSURL*)url;
 @end

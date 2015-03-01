@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "DownOperation.h"
+#import <objc/runtime.h>
+#import <libxml/tree.h>//http://www.tuicool.com/articles/Nraau2
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    NSOperationQueue *queue;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
-
++ (id)shared;
+//- (void)pageLoaded:(NSXMLDocument*)document;
 @end
 
