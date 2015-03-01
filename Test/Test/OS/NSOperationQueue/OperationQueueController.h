@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.h
+//  OperationQueueController.h
 //  Test
 //
 //  Created by Murderer on 15/3/1.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
-@property (nonatomic,weak) IBOutlet UITableView *table;
+@interface OperationQueueController : UIViewController
+
 @end
